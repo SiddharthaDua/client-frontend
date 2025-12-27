@@ -1,0 +1,90 @@
+#why-choose-wrapper {
+    width: 100%;
+}
+
+/* Scroll Animation */
+@keyframes slideUpWhy {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#why-choose-wrapper .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+#why-choose-wrapper .animate-on-scroll.visible {
+    animation: slideUpWhy 0.7s ease-out forwards;
+}
+
+/* Benefit Item Styling */
+#why-choose-wrapper .benefit-item {
+    position: relative;
+    padding-left: 3.5rem;
+    transition: all 0.3s ease;
+}
+
+#why-choose-wrapper .benefit-item::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #0ea5e9, #7dd3fc);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.4s ease;
+}
+
+#why-choose-wrapper .benefit-item:hover::before {
+    transform: scale(1.1) rotate(360deg);
+}
+
+/* Results Dashboard (FIXED COLORS) */
+#why-choose-wrapper .results-dashboard-card {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+}
+
+#why-choose-wrapper .stat-card-glass {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#why-choose-wrapper .dashboard-stat-number {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: white !important;
+    /* Forces visibility */
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+/* Resetting potential overrides from global CSS */
+#why-choose-wrapper .results-dashboard-card h3 {
+    color: white !important;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    #why-choose-wrapper .dashboard-stat-number {
+        font-size: 2.8rem;
+    }
+
+    #why-choose-wrapper .benefit-item {
+        padding-left: 3rem;
+    }
+}

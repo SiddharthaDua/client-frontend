@@ -1,0 +1,82 @@
+#meta-ads-solutions-wrapper {
+    width: 100%;
+}
+
+/* Scroll Animation */
+@keyframes slideUpAds {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#meta-ads-solutions-wrapper .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+#meta-ads-solutions-wrapper .animate-on-scroll.visible {
+    animation: slideUpAds 0.7s ease-out forwards;
+}
+
+/* Feature Card Styles */
+#meta-ads-solutions-wrapper .feature-card {
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: white;
+    overflow: hidden;
+    height: 100%;
+}
+
+#meta-ads-solutions-wrapper .feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+#meta-ads-solutions-wrapper .feature-card:hover::before {
+    left: 100%;
+}
+
+#meta-ads-solutions-wrapper .feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(14, 165, 233, 0.2);
+}
+
+/* Icon Container Animation */
+#meta-ads-solutions-wrapper .icon-container {
+    position: relative;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+#meta-ads-solutions-wrapper .feature-card:hover .icon-container {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Text Consistency */
+#meta-ads-solutions-wrapper h3 {
+    color: #111827;
+}
+
+#meta-ads-solutions-wrapper p,
+#meta-ads-solutions-wrapper li {
+    font-size: 1rem;
+}
+
+/* Ensure mobile cards appear cleanly when hidden is removed */
+@media (max-width: 767px) {
+    #meta-ads-solutions-wrapper .feature-card.block {
+        display: block;
+    }
+}

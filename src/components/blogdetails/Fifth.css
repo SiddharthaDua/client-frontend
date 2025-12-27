@@ -1,0 +1,49 @@
+/* Animation for Conclusion */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.delay-500 {
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+/* Tag Badge Styling & Hover Effects */
+.tag-badge {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.tag-badge:hover {
+    transform: scale(1.1);
+    background-color: #0ea5e9;
+    color: #ffffff !important;
+    /* Changes text to white on hover */
+}
+
+/* Typography Consistency */
+.article-content h3 {
+    color: #000000;
+    font-weight: 700;
+}
+
+.article-content p {
+    line-height: 1.8;
+}
+
+/* Border styling for the top divider */
+.border-t-2 {
+    border-top-width: 2px;
+}

@@ -1,0 +1,72 @@
+#proven-process-wrapper {
+    width: 100%;
+}
+
+/* Scroll Animation */
+@keyframes slideUpProcess {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#proven-process-wrapper .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+#proven-process-wrapper .animate-on-scroll.visible {
+    animation: slideUpProcess 0.7s ease-out forwards;
+}
+
+/* Process Connector Line */
+#proven-process-wrapper .process-connector {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #0ea5e9, #7dd3fc);
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+/* Step Circle & Animation */
+#proven-process-wrapper .step-circle {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#proven-process-wrapper .process-step:hover .step-circle {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(14, 165, 233, 0.3);
+}
+
+#proven-process-wrapper .process-step {
+    position: relative;
+}
+
+#proven-process-wrapper h3 {
+    line-height: 1.3;
+}
+
+#proven-process-wrapper p {
+    font-size: 1rem;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    #proven-process-wrapper .process-connector {
+        display: none;
+    }
+
+    #proven-process-wrapper .process-step {
+        margin-bottom: 2rem;
+    }
+}

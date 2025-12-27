@@ -1,0 +1,164 @@
+.omm-wrapper {
+    --omm-primary: #0ea5e9;
+    --omm-secondary: #7dd3fc;
+    --omm-text-dark: #111827;
+    --omm-text-gray: #4b5563;
+    --omm-bg: #ffffff;
+    --omm-border: #e0f2fe;
+}
+
+.omm-wrapper .omm-section {
+    padding: 80px 24px;
+    background-color: var(--omm-bg);
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.omm-wrapper .omm-container {
+    max-width: 800px;
+    /* Centered narrow layout for methodology */
+    margin: 0 auto;
+}
+
+.omm-wrapper .omm-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.omm-wrapper .omm-main-title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--omm-text-dark);
+    margin-bottom: 16px;
+}
+
+.omm-wrapper .omm-sub-desc {
+    font-size: 1.25rem;
+    color: var(--omm-text-gray);
+}
+
+/* Timeline Core Structure */
+.omm-wrapper .omm-timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.omm-wrapper .timeline-step {
+    position: relative;
+    padding-left: 60px;
+    /* Space for the circle */
+}
+
+/* The Blue Circles */
+.omm-wrapper .timeline-step::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--omm-primary), var(--omm-secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4);
+    z-index: 2;
+}
+
+/* The Vertical Line Connecting Circles */
+.omm-wrapper .timeline-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 19px;
+    /* Centered under the 40px circle */
+    top: 40px;
+    width: 2px;
+    height: calc(100% + 48px);
+    /* Card height + gap */
+    background: linear-gradient(180deg, var(--omm-primary), var(--omm-secondary));
+    z-index: 1;
+}
+
+/* Step Card Styling */
+.omm-wrapper .step-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border: 2px solid var(--omm-border);
+    transition: transform 0.3s ease;
+}
+
+.omm-wrapper .step-card:hover {
+    transform: translateX(10px);
+}
+
+.omm-wrapper .step-content-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.omm-wrapper .step-number {
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: var(--omm-primary);
+}
+
+.omm-wrapper .step-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--omm-text-dark);
+}
+
+.omm-wrapper .step-description {
+    color: var(--omm-text-gray);
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+/* Scroll Animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.omm-wrapper .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.omm-wrapper .animate-on-scroll.visible {
+    animation: slideUp 0.7s ease-out forwards;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 640px) {
+    .omm-wrapper .omm-main-title {
+        font-size: 2rem;
+    }
+
+    .omm-wrapper .timeline-step {
+        padding-left: 50px;
+    }
+
+    .omm-wrapper .timeline-step::before {
+        width: 30px;
+        height: 30px;
+    }
+
+    .omm-wrapper .timeline-step:not(:last-child)::after {
+        left: 14px;
+    }
+}

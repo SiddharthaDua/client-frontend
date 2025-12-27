@@ -1,0 +1,201 @@
+/* Wrapper to prevent style leakage */
+.oms-wrapper {
+    --primary-sky: #0ea5e9;
+    --secondary-sky: #7dd3fc;
+    --dark-gray: #111827;
+    --light-gray: #4b5563;
+    --bg-white: #ffffff;
+    --soft-blue: #e0f2fe;
+}
+
+.oms-wrapper .oms-section {
+    padding: 80px 24px;
+    background-color: var(--bg-white);
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.oms-wrapper .oms-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.oms-wrapper .oms-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.oms-wrapper .oms-title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--dark-gray);
+    margin-bottom: 16px;
+}
+
+.oms-wrapper .oms-description {
+    font-size: 1.25rem;
+    color: var(--light-gray);
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+/* Grid Layout */
+.oms-wrapper .oms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+/* Hexagon Card Styling */
+.oms-wrapper .hexagon-card {
+    position: relative;
+    width: 100%;
+    perspective: 1000px;
+}
+
+.oms-wrapper .hexagon-inner {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.oms-wrapper .hexagon-card:hover .hexagon-inner {
+    transform: rotateY(180deg);
+}
+
+.oms-wrapper .hexagon-front,
+.oms-wrapper .hexagon-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.oms-wrapper .hexagon-front {
+    background: var(--bg-white);
+    border: 3px solid var(--soft-blue);
+}
+
+.oms-wrapper .hexagon-back {
+    background: linear-gradient(135deg, var(--primary-sky), #0284c7);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* Icon & Animation */
+.oms-wrapper .icon-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--soft-blue), var(--secondary-sky));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.oms-wrapper .oms-icon {
+    width: 48px;
+    height: 48px;
+    color: var(--primary-sky);
+}
+
+.oms-wrapper .hexagon-card:hover .icon-circle {
+    animation: pulse-glow 0.5s ease-in-out infinite, rotate 2s linear infinite;
+}
+
+/* Typography Inside Cards */
+.oms-wrapper .service-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dark-gray);
+    margin-bottom: 8px;
+}
+
+.oms-wrapper .service-desc-short {
+    color: var(--light-gray);
+}
+
+.oms-wrapper .back-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: white;
+}
+
+.oms-wrapper .back-list {
+    text-align: left;
+    font-size: 0.875rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.oms-wrapper .back-list li {
+    margin-bottom: 4px;
+}
+
+/* Animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(14, 165, 233, 0.6);
+    }
+}
+
+.oms-wrapper .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.oms-wrapper .animate-on-scroll.visible {
+    animation: slideUp 0.7s ease-out forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .oms-wrapper .oms-title {
+        font-size: 2.25rem;
+    }
+
+    .oms-wrapper .hexagon-inner {
+        height: 280px;
+    }
+}

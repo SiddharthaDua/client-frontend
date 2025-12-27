@@ -1,0 +1,33 @@
+/* Card Border Gradient Effect */
+.website-types-container .gradient-border {
+    position: relative;
+    background: linear-gradient(white, white) padding-box,
+        linear-gradient(135deg, #0EA5E9, #000000) border-box;
+    border: 2px solid transparent;
+}
+
+/* Hover Lift Animation */
+.website-types-container .hover-lift {
+    transition: all 0.3s ease;
+}
+
+.website-types-container .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(14, 165, 233, 0.2);
+}
+
+/* Icon Animation inside Card */
+.website-types-container .feature-icon {
+    transition: all 0.3s ease;
+}
+
+.website-types-container .feature-card:hover .feature-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Responsive adjust for smoother transition */
+@media (prefers-reduced-motion: no-preference) {
+    .website-types-container .feature-card {
+        will-change: transform;
+    }
+}

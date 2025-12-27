@@ -1,0 +1,82 @@
+/* =============================
+   ALL TECHNOLOGY SECTION
+============================= */
+
+.tech-section {
+    background-color: #E5EBF3;
+    padding: 70px 0;
+    overflow: hidden;
+}
+
+.tech-heading {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: #0792D6;
+}
+
+/* SLIDER */
+.tech-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.tech-track {
+    display: flex;
+    width: max-content;
+    animation: scrollLeft 25s linear infinite;
+}
+
+.tech-logo {
+    flex: 0 0 auto;
+    width: 120px;
+    height: 120px;
+    background: #ffffff;
+    border-radius: 16px;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.tech-logo:hover {
+    transform: scale(1.1);
+}
+
+.tech-logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* ANIMATION */
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .tech-logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .tech-logo img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .tech-heading {
+        font-size: 26px;
+    }
+}

@@ -1,0 +1,76 @@
+/* Initial State for Intersection Observer */
+.hidden-initial {
+    opacity: 0;
+}
+
+/* Base Animations from your design */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animation Helper Classes */
+.animate-slide-up {
+    animation: slideInUp 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+}
+
+/* Delays for staggered card entry */
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+/* The Core Card Hover Effect - Exactly as in your code */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Ensure smooth icon transition inside cards */
+.group:hover .w-20 {
+    background: white !important;
+    /* Makes icon container white on hover for contrast */
+}
+
+.group:hover svg {
+    color: #0ea5e9;
+    /* Changes icon color to blue on hover */
+}

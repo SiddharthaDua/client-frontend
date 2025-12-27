@@ -1,0 +1,43 @@
+/* AiSeo.css */
+
+/* Wrapper class to prevent style leaks */
+.ai-seo-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.ai-seo-wrapper .ai-service-card {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+}
+
+.ai-seo-wrapper .ai-service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(14, 165, 233, 0.3);
+    border-color: #0ea5e9;
+}
+
+.ai-seo-wrapper .ai-icon-wrapper {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ai-seo-wrapper .ai-service-card:hover .ai-icon-wrapper {
+    transform: scale(1.2) rotate(-5deg);
+}
+
+.ai-seo-wrapper .check-neon {
+    color: #38bdf8;
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+/* Mobile optimizations for button */
+@media (max-width: 767px) {
+    .ai-seo-wrapper button {
+        cursor: pointer;
+        background: transparent;
+        outline: none;
+    }
+}

@@ -1,0 +1,28 @@
+/* Card Base Style */
+.category-card {
+    transition: all 0.4s ease;
+}
+
+/* Hover Effect: Moves Up and Glows */
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(14, 165, 233, 0.3);
+    border-color: #0ea5e9;
+    /* sky-500 equivalent */
+}
+
+/* Number Badge Animation on Hover */
+.feature-badge {
+    transition: all 0.3s ease;
+}
+
+.category-card:hover .feature-badge {
+    transform: scale(1.1);
+    background-color: #0284c7;
+    /* sky-600 for a slight pop */
+}
+
+/* Typography smoothing */
+.category-card h3 {
+    letter-spacing: -0.01em;
+}

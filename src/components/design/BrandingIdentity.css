@@ -1,0 +1,54 @@
+/* BrandingIdentity.css */
+
+/* Scope everything inside the wrapper to prevent overriding */
+.branding-identity-wrapper {
+    box-sizing: border-box;
+}
+
+.branding-identity-wrapper * {
+    box-sizing: border-box;
+}
+
+.branding-identity-wrapper .zigzag-layout {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.branding-identity-wrapper .content-side,
+.branding-identity-wrapper .image-side {
+    flex: 1;
+}
+
+.branding-identity-wrapper .badge-inline {
+    display: inline-block;
+}
+
+.branding-identity-wrapper .section-title {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.branding-identity-wrapper .branding-img-container {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.branding-identity-wrapper .branding-img-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive handling */
+@media (max-width: 768px) {
+    .branding-identity-wrapper .zigzag-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .branding-identity-wrapper .image-side {
+        margin-top: 2rem;
+    }
+
+    .branding-identity-wrapper .list-items p {
+        justify-content: center;
+    }
+}

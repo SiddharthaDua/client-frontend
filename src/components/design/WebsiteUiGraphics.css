@@ -1,0 +1,59 @@
+/* WebsiteUiGraphics.css */
+
+/* Wrapper to isolate styles */
+.website-ui-wrapper {
+    box-sizing: border-box;
+}
+
+.website-ui-wrapper * {
+    box-sizing: border-box;
+}
+
+.website-ui-wrapper .website-zigzag-section {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.website-ui-wrapper .website-content-side,
+.website-ui-wrapper .website-image-side {
+    flex: 1;
+}
+
+.website-ui-wrapper .website-main-title {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.website-ui-wrapper .website-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.website-ui-wrapper .website-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.website-ui-wrapper .website-visual-box {
+    transition: all 0.3s ease;
+}
+
+.website-ui-wrapper .website-visual-box:hover {
+    transform: scale(1.02) rotate(1deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .website-ui-wrapper .website-zigzag-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .website-ui-wrapper .website-image-side {
+        margin-top: 3rem;
+    }
+
+    .website-ui-wrapper .website-card {
+        text-align: left;
+    }
+}

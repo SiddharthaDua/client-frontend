@@ -1,0 +1,70 @@
+/* EcommerceProductDesign.css */
+
+.ecommerce-design-wrapper {
+    box-sizing: border-box;
+}
+
+.ecommerce-design-wrapper .ecommerce-zigzag-section {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.ecommerce-design-wrapper .ecommerce-image-side,
+.ecommerce-design-wrapper .ecommerce-content-side {
+    flex: 1;
+}
+
+.ecommerce-design-wrapper .ecommerce-main-title {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Container for positioning */
+.ecommerce-design-wrapper .image-relative-container {
+    width: fit-content;
+}
+
+/* Big image box - Rotation fixed, Animation removed */
+/* .ecommerce-design-wrapper .big-image-box {
+    transform: rotate(6deg);
+    transition: transform 0.4s ease;
+} */
+
+/* Small image box - Animation kept */
+.ecommerce-design-wrapper .small-image-box {
+    animation: floatSmall 3s ease-in-out infinite alternate;
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+
+/* Animation for Small Image only */
+@keyframes floatSmall {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-15px) translateX(-5px);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .ecommerce-design-wrapper .ecommerce-zigzag-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ecommerce-design-wrapper .ecommerce-image-side {
+        margin-bottom: 3rem;
+    }
+
+    .ecommerce-design-wrapper .ecommerce-list p {
+        justify-content: center;
+    }
+}
+
+/* Hover effect: Big image straightens on hover */
+/* .ecommerce-design-wrapper .image-relative-container:hover .big-image-box {
+    transform: rotate(0deg) scale(1.02);
+} */

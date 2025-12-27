@@ -1,0 +1,43 @@
+/* Typography and Spacing */
+.article-content p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* Quote Block Styling */
+.quote-block {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.quote-block:hover {
+    transform: translateX(5px);
+}
+
+/* Animations matching original design */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.delay-100 {
+    animation-delay: 0.1s;
+    opacity: 0;
+}
+
+/* Optional: To match the exact font smoothing of the original */
+.article-content {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

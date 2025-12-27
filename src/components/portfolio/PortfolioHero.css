@@ -1,0 +1,63 @@
+/* Fade-in for whole section */
+section {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Heading sky blue */
+.typing-heading {
+    color: white;
+    /* sky blue */
+}
+
+/* Cursor blinking */
+.cursor {
+    margin-left: 4px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+/* Paragraph black */
+.portfolio-para {
+    color: white;
+}
+
+/* Button sky blue effect */
+.portfolio-btn {
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+}
+
+.portfolio-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.6);
+}
+
+/* Video position safety */
+video {
+    object-position: center;
+
+}

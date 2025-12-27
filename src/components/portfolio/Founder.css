@@ -1,0 +1,46 @@
+/* Scale In Animation */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.8s ease-out forwards;
+}
+
+/* Staggered Delays */
+.delay-300 {
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+.delay-500 {
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+/* Card Hover Effect */
+.card-hover {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(14, 165, 233, 0.3);
+}
+
+/* Ensure mobile padding is clean */
+@media (max-width: 768px) {
+    .card-hover {
+        padding: 2rem 1.5rem;
+    }
+}

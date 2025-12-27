@@ -1,0 +1,194 @@
+.blogparagraph {
+    color: #4A5565;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+.headblog {
+    color: black;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+
+    padding-bottom: 10px;
+}
+
+.blog-wrapper {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    /* Thoda height badhaya wrapper ka kyunki card bada kiya hai */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f7fb;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    /* Thoda aur width Carousel ke liye */
+    height: 500px;
+    perspective: 1000px;
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    /* Size increased from 300px */
+    height: 480px;
+    /* Size increased from 400px */
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 1. FRONT CARD (Active) */
+.card.active {
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 10;
+    opacity: 1;
+}
+
+/* 2. SECOND LAYER */
+.card.left1 {
+    transform: translate(-140%, -50%) scale(0.85);
+    /* Distance slightly adjusted for larger cards */
+    z-index: 8;
+    opacity: 0.9;
+}
+
+.card.right1 {
+    transform: translate(40%, -50%) scale(0.85);
+    z-index: 8;
+    opacity: 0.9;
+}
+
+/* 3. THIRD LAYER */
+.card.left2 {
+    transform: translate(-220%, -50%) scale(0.75);
+    z-index: 5;
+    opacity: 0.7;
+}
+
+.card.right2 {
+    transform: translate(120%, -50%) scale(0.75);
+    z-index: 5;
+    opacity: 0.7;
+}
+
+/* HIDDEN CARDS */
+.card.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* NAVIGATION */
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #87CEEB;
+    color: white;
+    border: none;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 100;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav:hover {
+    background: #00BFFF;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.nav.left {
+    left: 20px;
+}
+
+.nav.right {
+    right: 20px;
+}
+
+/* BLOG CARD INNER DESIGN */
+.blog-img {
+    width: 100%;
+    height: 55%;
+    /* Aspect ratio balanced so image doesn't get cut */
+    overflow: hidden;
+}
+
+.blog-content {
+    padding: 20px;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.blog-tag {
+    font-size: 12px;
+    font-weight: 600;
+    color: #0ea5e9;
+    text-transform: uppercase;
+}
+
+.blog-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+    margin: 8px 0;
+}
+
+.blog-description {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    /* Isse text card ke andar hi rahega */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.blog-link {
+    background: none;
+    border: none;
+    color: #0ea5e9;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    width: fit-content;
+    font-size: 16px;
+    margin-top: auto;
+    /* Hamesha niche rahega description ke baad */
+}
+
+.blog-link:hover {
+    text-decoration: underline;
+}

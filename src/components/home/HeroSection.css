@@ -1,0 +1,282 @@
+/* =========================
+   HERO ROOT (SCOPE FIX)
+========================= */
+.hero-root {
+    --primary: #87CEEB;
+    --accent: #ADFF2F;
+
+    min-height: 100vh;
+    background: linear-gradient(135deg, #000000 0%, #0c4a6e 50%, #000000 100%);
+    position: relative;
+    overflow-x: hidden;
+    color: white;
+    font-family: 'Inter', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* LIMIT RESET ONLY TO HERO */
+.hero-root * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.circuit-bg {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(var(--primary) 0.5px, transparent 0.5px);
+    background-size: 40px 40px;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.main-heading {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    min-height: 3.5rem;
+    line-height: 1.2;
+    color: white;
+}
+
+.skyblue-text {
+    color: var(--primary);
+    text-shadow: 0 0 10px rgba(135, 206, 235, 0.3);
+}
+
+.cursor {
+    font-weight: 100;
+    animation: blink 1s step-end infinite;
+    color: var(--primary);
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.sub-heading {
+    color: #9ca3af;
+    font-size: 1.2rem;
+}
+
+/* Blinking Highlight Effect */
+.blink-text {
+    color: var(--primary);
+    font-weight: 600;
+    animation: highlight-blink 2s ease-in-out infinite;
+}
+
+@keyframes highlight-blink {
+
+    0%,
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 5px var(--primary);
+    }
+
+    50% {
+        opacity: 0.6;
+        text-shadow: none;
+    }
+}
+
+/* Visual Layout */
+.visual-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+}
+
+.content-left {
+    width: 100%;
+    max-width: 500px;
+}
+
+.graph-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(135, 206, 235, 0.1);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.graph-label {
+    color: var(--primary);
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.svg-chart {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+/* Orbit Section */
+.content-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+}
+
+.orbit-wrapper {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.computer-static {
+    width: 110px;
+    z-index: 5;
+}
+
+.comp-svg {
+    width: 100%;
+    height: auto;
+}
+
+.orbiting-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+    animation: rotate-orbit 15s linear infinite;
+}
+
+.icon-box {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes rotate-orbit {
+    from {
+        transform: rotate(0deg) translateX(110px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(110px) rotate(-360deg);
+    }
+}
+
+/* Animation Delays */
+.d1 {
+    animation-delay: 0s;
+}
+
+.d2 {
+    animation-delay: -2.5s;
+}
+
+.d3 {
+    animation-delay: -5s;
+}
+
+.d4 {
+    animation-delay: -7.5s;
+}
+
+.d5 {
+    animation-delay: -10s;
+}
+
+.d6 {
+    animation-delay: -12.5s;
+}
+
+/* Button */
+.button-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.btn-fill {
+    background: var(--primary);
+    color: black;
+    border: none;
+    padding: 0.8rem 3.5rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(135, 206, 235, 0.3);
+    transition: 0.3s;
+}
+
+.btn-fill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(135, 206, 235, 0.5);
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .main-heading {
+        font-size: 3.5rem;
+    }
+
+    .visual-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+    }
+
+    .content-left,
+    .content-right {
+        width: 45%;
+    }
+
+    @keyframes rotate-orbit {
+        from {
+            transform: rotate(0deg) translateX(160px) rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg) translateX(160px) rotate(-360deg);
+        }
+    }
+}

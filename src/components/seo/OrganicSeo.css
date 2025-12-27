@@ -1,0 +1,87 @@
+/* OrganicSeo.css */
+
+.organic-seo-wrapper {
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Fluid Row Effect */
+.organic-row {
+    position: relative;
+    cursor: default;
+}
+
+/* Background Reveal on Hover */
+.organic-row::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -24px;
+    right: -24px;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(14, 165, 233, 0.03) 0%, transparent 100%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.organic-row:hover::before {
+    opacity: 1;
+}
+
+/* Smooth Icon Transition */
+.organic-row .w-16 {
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.organic-row:hover .w-16 {
+    border-radius: 12px;
+    /* Smoothly morphs from circle to square */
+    transform: rotate(-10deg);
+}
+
+/* Minimalist Button Styling */
+.organic-seo-wrapper button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation for the floating glow in background */
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.4;
+    }
+}
+
+.organic-seo-wrapper .absolute {
+    animation: pulseGlow 10s ease-in-out infinite;
+}
+
+/* Responsive Fixes */
+@media (max-width: 1024px) {
+    .organic-row {
+        padding: 40px 0;
+    }
+
+    .organic-row .italic {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .organic-seo-wrapper .organic-row {
+        border-bottom: 2px solid #f8fafc;
+    }
+
+    .organic-seo-wrapper h2 {
+        font-size: 4rem !important;
+    }
+}

@@ -1,0 +1,17 @@
+/* Rating.css */
+
+.stats-container {
+    transition: all 0.5s ease-in-out;
+}
+
+.stat-item {
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    text-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+}

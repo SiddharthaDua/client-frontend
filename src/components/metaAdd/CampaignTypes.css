@@ -1,0 +1,59 @@
+#campaign-types-wrapper {
+    width: 100%;
+}
+
+/* Scroll Animation */
+@keyframes slideUpCampaign {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#campaign-types-wrapper .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+#campaign-types-wrapper .animate-on-scroll.visible {
+    animation: slideUpCampaign 0.7s ease-out forwards;
+}
+
+/* Campaign Card Design */
+#campaign-types-wrapper .campaign-type {
+    background: white;
+    border-left: 4px solid #0ea5e9;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: relative;
+    cursor: default;
+}
+
+#campaign-types-wrapper .campaign-type:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 20px rgba(14, 165, 233, 0.15);
+    border-left-width: 8px;
+}
+
+#campaign-types-wrapper h2 {
+    line-height: 1.2;
+}
+
+#campaign-types-wrapper h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    #campaign-types-wrapper .campaign-type:hover {
+        transform: translateX(5px);
+    }
+}

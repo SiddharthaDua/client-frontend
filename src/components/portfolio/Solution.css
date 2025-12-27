@@ -1,0 +1,54 @@
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Staggered Delays */
+.delay-200 {
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+/* Card Hover & Process Step Styling */
+.card-hover {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(14, 165, 233, 0.15);
+    border-color: #0ea5e9 !important;
+    /* Hover par border light blue ho jayegi */
+}
+
+.process-step {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Specific scaling for Solution cards */
+.process-step:hover {
+    transform: scale(1.05);
+}

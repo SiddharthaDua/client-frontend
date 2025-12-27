@@ -1,0 +1,60 @@
+/* SocialMediaDesign.css */
+
+/* Wrapper to isolate styles */
+.social-media-design-wrapper {
+    box-sizing: border-box;
+}
+
+.social-media-design-wrapper * {
+    box-sizing: border-box;
+}
+
+.social-media-design-wrapper .social-zigzag-section {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* Original code reversal: In the source, social section was flex-direction: row-reverse */
+@media (min-width: 769px) {
+    .social-media-design-wrapper .social-zigzag-section {
+        flex-direction: row;
+        /* Match the layout sequence in JSX */
+    }
+}
+
+.social-media-design-wrapper .social-media-visuals,
+.social-media-design-wrapper .social-media-content {
+    flex: 1;
+}
+
+.social-media-design-wrapper .social-box {
+    transition: all 0.3s ease;
+}
+
+.social-media-design-wrapper .social-box:hover {
+    transform: scale(1.05);
+}
+
+.social-media-design-wrapper .social-main-title {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .social-media-design-wrapper .social-zigzag-section {
+        flex-direction: column-reverse;
+        /* Icons below text or vice-versa depending on your preference */
+        text-align: center;
+    }
+
+    .social-media-design-wrapper .social-media-visuals {
+        margin-top: 2.5rem;
+    }
+
+    .social-media-design-wrapper .social-list-grid {
+        text-align: left;
+        display: inline-grid;
+        margin-top: 1rem;
+    }
+}

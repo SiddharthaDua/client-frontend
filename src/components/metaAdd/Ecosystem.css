@@ -1,0 +1,76 @@
+/* Unique Wrapper to prevent global style pollution */
+#meta-ecosystem-wrapper {
+    width: 100%;
+}
+
+/* Animation for scroll Reveal */
+@keyframes slideUpEcosystem {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#meta-ecosystem-wrapper .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+#meta-ecosystem-wrapper .animate-on-scroll.visible {
+    animation: slideUpEcosystem 0.7s ease-out forwards;
+}
+
+/* Platform Badge Hover Effects */
+#meta-ecosystem-wrapper .platform-badge {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#meta-ecosystem-wrapper .platform-badge::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(14, 165, 233, 0.05);
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+    z-index: -1;
+    /* Placed behind content */
+}
+
+#meta-ecosystem-wrapper .platform-badge:hover::after {
+    width: 250%;
+    height: 250%;
+}
+
+#meta-ecosystem-wrapper .platform-badge:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    border-color: rgba(14, 165, 233, 0.3);
+}
+
+/* Ensure text and icons stay visible above the background */
+#meta-ecosystem-wrapper .platform-badge h3,
+#meta-ecosystem-wrapper .platform-badge p,
+#meta-ecosystem-wrapper .platform-badge div {
+    position: relative;
+    z-index: 2;
+}
+
+#meta-ecosystem-wrapper .platform-badge div {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#meta-ecosystem-wrapper .platform-badge:hover div {
+    transform: scale(1.1) rotate(3deg);
+}

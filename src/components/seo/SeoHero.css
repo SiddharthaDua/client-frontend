@@ -1,0 +1,56 @@
+/* Wrapper specific styles to prevent overrides */
+.seo-hero-wrapper .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.seo-hero-wrapper .animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.seo-hero-wrapper .delay-100 {
+    animation-delay: 0.1s;
+}
+
+.seo-hero-wrapper .delay-200 {
+    animation-delay: 0.2s;
+}
+
+.seo-hero-wrapper .delay-300 {
+    animation-delay: 0.3s;
+}
+
+/* Background Circles Animation Delay */
+.seo-hero-wrapper .delay-float-100 {
+    animation-delay: 1s;
+}
+
+.seo-hero-wrapper .delay-float-200 {
+    animation-delay: 2s;
+}
+
+/* Keyframes remain global as they don't cause conflicts usually, 
+   but they are triggered only by classes inside the wrapper */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}

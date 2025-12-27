@@ -1,0 +1,36 @@
+/* PricingPlans Scoped Styles */
+
+.pricing-plans-wrapper .price-card {
+    transition: all 0.3s ease;
+}
+
+/* Card Hover Effect */
+.pricing-plans-wrapper .price-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px -12px rgba(14, 165, 233, 0.25);
+}
+
+/* Specific Hover for Professional Card to maintain its scale */
+.pricing-plans-wrapper .price-card.md\:scale-105:hover {
+    transform: scale(1.08) translateY(-10px);
+}
+
+/* Checkmark Animation */
+.pricing-plans-wrapper .checkmark {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.pricing-plans-wrapper .price-card:hover .checkmark {
+    transform: scale(1.2);
+}
+
+/* Button Pulse effect on hover */
+.pricing-plans-wrapper button:hover {
+    transform: scale(1.02);
+}
+
+/* Scannability for Headings */
+.pricing-plans-wrapper #pricing-title {
+    letter-spacing: -0.025em;
+}

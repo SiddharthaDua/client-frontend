@@ -1,0 +1,32 @@
+/* Animation for the section appearance */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Hover effect for buttons */
+.hover\:scale-105:hover {
+    transform: scale(1.05);
+}
+
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+/* Base font setup to match the portfolio style */
+.font-sans {
+    font-family: system-ui, -apple-system, sans-serif;
+}
