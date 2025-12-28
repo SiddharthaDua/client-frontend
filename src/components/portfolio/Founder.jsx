@@ -6,7 +6,7 @@ const Founder = () => {
         {
             initials: 'PD',
             quote: "The team’s expertise and creativity transformed our social media presence beyond our expectations.",
-            name: "Pravat Das",
+            name: "Prabhat Das",
             role: "Founder.",
             delay: 'delay-300'
         },
@@ -14,7 +14,7 @@ const Founder = () => {
             initials: 'SD',
             quote: "Our vision was to build something truly unique, and this partnership helped turn that vision into reality.",
             name: "Siddhartha Dua",
-            name: "Siddhartha Dua",
+
             role: "Co-Founder .",
             delay: 'delay-500'
         }

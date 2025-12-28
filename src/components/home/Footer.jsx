@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import footerLogo from '../../assets/footerlogo.png'
 import {
     FaFacebookF,
     FaInstagram,
@@ -20,7 +21,7 @@ const Footer = ({ onGetStarted }) => {
                     <div>
                         <NavLink to="/" className="flex items-center">
                             <img
-                                src="../public/footerlogo.png"
+                                src={footerLogo}
                                 alt="Logo"
                                 className="h-12 md:h-13 w-auto object-contain"
                             />
@@ -87,7 +88,8 @@ const Footer = ({ onGetStarted }) => {
                             </li>
                             <li className="flex items-center gap-3">
                                 <span className="text-sky-400 font-bold">📍</span>
-                                <span>India, Kolkata-700001</span>
+                                <span>Kolkata – 700001, West Bengal, India
+                                </span>
                             </li>
                         </ul>
                     </div>
