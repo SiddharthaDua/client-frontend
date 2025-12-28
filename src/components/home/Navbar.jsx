@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-
+import mainLogo from '../../assets/mainlogo.png'
 const Navbar = ({ onGetStarted }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [serviceOpen, setServiceOpen] = useState(false);
@@ -29,7 +29,7 @@ const Navbar = ({ onGetStarted }) => {
                         {/* LOGO SECTION */}
                         <NavLink to="/" className="flex items-center">
                             <img
-                                src="../public/mainlogo.png"
+                                src={mainLogo}
                                 alt="Logo"
                                 className="h-12 md:h-13 w-auto object-contain"
                             />
