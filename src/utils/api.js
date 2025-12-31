@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// Backend URL (Local development ke liye 5000)
-const API_BASE_URL = "http://localhost:5000/api/form";
+// Environment se backend URL
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const api = axios.create({
     baseURL: API_BASE_URL,
@@ -16,7 +16,6 @@ export const submitContactForm = async (userData) => {
         const response = await api.post("/submit", userData);
         return response.data;
     } catch (error) {
-        // Backend se aane wala error message return karega
         throw error.response?.data?.message || "Something went wrong";
     }
 };
