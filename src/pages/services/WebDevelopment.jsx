@@ -1,5 +1,5 @@
 import React from 'react'
-import WebHero from '../../components/webdevelopment/webHero'
+import WebHero from '../../components/webdevelopment/WebHero'
 import WebsiteTypes from '../../components/webdevelopment/WebsiteTypes'
 import WeProvide from '../../components/webdevelopment/WeProvide'
 import PricingPlans from '../../components/webdevelopment/PricingPlans'
