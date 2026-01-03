@@ -76,7 +76,7 @@ const Blog = () => {
 
     return (
         <div>
-            <h1 className="headblog">Blogs</h1>
+            <h2 className="headblog">Blogs</h2>
             <p className="blogparagraph">
                 Read our latest blogs and industry insights
             </p>

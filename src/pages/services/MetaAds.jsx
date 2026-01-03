@@ -12,6 +12,8 @@ import MasterEveryAdFormat from '../../components/metaAdd/MasterEveryAdFormat'
 const MetaAds = ({ onGetStarted }) => {
     return (
         <div>
+
+            <h1 className="sr-only">Meta Ads Services</h1>
             <MetaHero onGetStarted={onGetStarted} />
             <Ecosystem />
             <MetaAdvertising />

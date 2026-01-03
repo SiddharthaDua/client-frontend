@@ -68,7 +68,7 @@ function App() {
       )}
 
       {/* CONTACT POPUP */}
-      <Contact onPopupChange={setIsContactOpen} />
+      {/* <Contact onPopupChange={setIsContactOpen} /> */}
 
       {/* FLOATING ICON */}
       {!isAnyPopupOpen && <FloatingContact />}

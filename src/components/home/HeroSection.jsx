@@ -75,10 +75,10 @@ const HeroSection = ({ onGetStarted }) => { // 1. onGetStarted prop accept karei
 
             <main className="content-wrapper">
                 <div className="hero-section">
-                    <h1 className="main-heading">
+                    <h2 className="main-heading">
                         {renderHeading()}
                         <span className="cursor">|</span>
-                    </h1>
+                    </h2>
                     <p className="sub-heading">
                         Grow your business with{" "}
                         <span className="blink-text">SP TechDigital.</span>

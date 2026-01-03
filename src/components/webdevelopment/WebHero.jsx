@@ -16,10 +16,10 @@ const WebHero = ({ onGetStarted }) => {
                     </div>
 
                     {/* Main Title */}
-                    <h1 className="text-5xl md:text-7xl font-bold text-black mb-6 animate-fade-in-up delay-100">
+                    <h2 className="text-5xl md:text-7xl font-bold text-black mb-6 animate-fade-in-up delay-100">
                         Website Development Services
 
-                    </h1>
+                    </h2>
 
                     {/* Subtitle */}
                     <p className="text-xl md:text-2xl text-gray-700 mb-10 animate-fade-in-up delay-200 max-w-4xl mx-auto">
