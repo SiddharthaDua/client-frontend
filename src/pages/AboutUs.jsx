@@ -11,7 +11,6 @@ const AboutUs = ({ onGetStarted }) => {
         <div>
             {/* 🔥 Popup trigger yahan se pass hoga */}
             <AboutHero onGetStarted={onGetStarted} />
-
             <OurJourney />
             <OurCoreValues />
             <OurImpact />
