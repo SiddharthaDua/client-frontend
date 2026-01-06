@@ -24,7 +24,7 @@ import BlogDetails from "./pages/BlogDetails";
 import ScrollToTop from "./components/home/ScrollToTop";
 
 function App() {
-  const [isContactOpen, setIsContactOpen] = useState(false);
+  // const [isContactOpen, setIsContactOpen] = useState(false);
   const [isGetStartedOpen, setIsGetStartedOpen] = useState(false);
 
   // 🔥 Agar koi bhi popup open ho → floating hide
