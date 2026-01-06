@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/home/Navbar";
 import Footer from "./components/home/Footer";
 import FloatingContact from "./components/home/FloatingContact";
-import Contact from "./components/home/Contact";
+// import Contact from "./components/home/Contact";
 import GetStarted from "./components/home/GetStarted"; // ✅ ADD
 
 // Pages
@@ -24,7 +24,7 @@ import BlogDetails from "./pages/BlogDetails";
 import ScrollToTop from "./components/home/ScrollToTop";
 
 function App() {
-  const [isContactOpen, setIsContactOpen] = useState(false);
+  // const [isContactOpen, setIsContactOpen] = useState(false);
   const [isGetStartedOpen, setIsGetStartedOpen] = useState(false);
 
   // 🔥 Agar koi bhi popup open ho → floating hide
